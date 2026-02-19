@@ -1,17 +1,20 @@
 # Engineering Portfolio | Language-Agnostic Systems
 
-This repository serves as the central "Command Center" for my software engineering projects. It is designed to showcase core engineering principles—concurrency, memory management, and system architecture—across a variety of programming languages.
+A high-performance portfolio built to demonstrate that core engineering principles—state management, API integration, and system architecture—transcend specific syntax.
 
-## 🛠 Core Tech Stack
-- **Framework:** [Next.js 15](https://nextjs.org) (App Router)
-- **Language:** [TypeScript](https://www.typescriptlang.org)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com)
-- **Deployment:** Containerized via Docker (Planned)
+## 🚀 Key Features
+- **Interactive Terminal:** A custom-built command-line interface (built with React state) allowing users to query project data.
+- **Dynamic Project Engine:** Integrated with the [GitHub REST API](https://docs.github.com) to fetch live repository statistics and status.
+- **Strictly Typed:** Built entirely in [TypeScript](https://www.typescriptlang.org) for enterprise-grade reliability.
 
-## 🎯 The Philosophy
-As a self-taught hobbyist moving into professional engineering, I prioritize **patterns over syntax**. This site dynamically pulls data from my various projects, whether they are built in C++, Rust, Python, or Go, to demonstrate a versatile problem-solving mindset.
+## 🛠 Tech Stack
+- **Core:** Next.js 15 (App Router)
+- **State/Logic:** React Hooks + TypeScript
+- **Styling:** Tailwind CSS (Utility-first design)
+- **Icons:** Lucide-React
 
-## 🚀 Setup & Development
-1. Clone the repo
-2. Install dependencies: `npm install`
-3. Run development server: `npm run dev`
+## 💻 Commands
+In the integrated terminal, you can run:
+- `ls`: List all projects and their primary languages.
+- `about`: View the engineering philosophy.
+- `help`: See all available system commands.

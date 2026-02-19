@@ -7,4 +7,6 @@ export interface Project {
     liveUrl?: string;
     status: 'active' | 'archived' | 'planned' | 'completed' | 'in-progress';
     difficulty: 'Entry' | 'Intermediate' | 'Advanced';
+    stars: number;
+    lastUpdated: string;
 }

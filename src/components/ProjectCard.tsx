@@ -1,4 +1,4 @@
-import { Project } from './lib/types/project';
+import { Project } from '../types/project';
 import { Code2, Github, ExternalLink } from 'lucide-react';
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -28,6 +28,14 @@ export default function ProjectCard({ project }: { project: Project }) {
                     </a>
                 )}
             </div>
+                <div className="flex items-center gap-4 mt-4 text-xs text-zinc-500">
+                    <span className="flex items-center gap-1">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        Live
+                        </span>
+                        <span>Updated: {project.lastUpdated || 'Recently'}</span>
+                        {project.stars > 0 && <span>⭐ {project.stars}</span>}
+                </div>
         </div>
     );
 }

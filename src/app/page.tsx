@@ -1,5 +1,6 @@
-import ProjectCard from './components/ProjectCard';
-import { projects } from './components/lib/projects';
+import ProjectCard from '../components/ProjectCard';
+import { projects } from '../lib/projects';
+import Terminal from '../components/Terminal';
 
 export default function Home() {
     return (
@@ -14,7 +15,9 @@ export default function Home() {
                     showcasing versatility and a deep understanding of software development across languages and paradigms.
                 </p>
             </header>
-
+            <section className="mb-20">
+                <Terminal />
+            </section>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.map((p) => (
                     <ProjectCard key={p.id} project={p} />
