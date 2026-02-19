@@ -8,7 +8,9 @@ export const projects: Project[] = [
         language: "C++",
         githubUrl: "https://github.com/Ookamis-Code/website-portfolio",
         status: "active",
-        difficulty: "Advanced"
+        difficulty: "Advanced",
+        stars: 42,
+        lastUpdated: "2024-06-01",
     },
 
 ];
