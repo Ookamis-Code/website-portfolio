@@ -5,6 +5,11 @@ const octokit = new Octokit({
 });
 
 export async function getProjectStats(owner: string, repo: string) {
+  if (!process.env.GITHUB_TOKEN) {
+    console.warn("GITHUB_TOKEN is not set. Skipping GitHub API calls.");
+    return null;
+  }
+  
   try {
     const { data } = await octokit.rest.repos.get({ owner, repo });
     return {
