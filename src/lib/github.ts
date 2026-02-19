@@ -1,4 +1,4 @@
-import { Octokit } from "octokit";
+import { Octokit } from "Octokit";
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN // We'll set this next
