@@ -1,8 +1,10 @@
 import ProjectCard from '../components/ProjectCard';
-import { projects } from '../lib/projects';
+import { getLiveProjects } from '../lib/projects';
 import Terminal from '../components/Terminal';
 
-export default function Home() {
+
+export default async function Home() {
+    const projects = await getLiveProjects();
     return (
         <main className="max-w-6xl mx-auto px-6 py-20">
             <header className="mb-16">
