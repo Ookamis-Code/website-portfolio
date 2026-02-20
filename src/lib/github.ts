@@ -1,7 +1,7 @@
-import { Octokit } from 'Octokit';
+import { Octokit } from "octokit";
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN // We'll set this next
+  auth: process.env.GITHUB_TOKEN
 });
 
 export async function getProjectStats(owner: string, repo: string) {
