@@ -10,7 +10,7 @@ export const useTerminal = (projects: Project[]) => {
 
     switch (command) {
       case 'help':
-        response = "Available: ls (list projects), clear, about, contact, github, linkedin";
+        response = "Available: ls (list projects), clear, about, contact, github, linkedin, cd (navigate to project)";
         break;
       case 'ls':
         response = projects.map(p => `${p.title} [${p.language}]`).join(", ");
@@ -29,6 +29,16 @@ export const useTerminal = (projects: Project[]) => {
         break;
       case 'linkedin':
         response = "LinkedIn:https://www.linkedin.com/in/nick-henderson-2908513b0/";
+        break;
+      case (command.match(/^cd /) || {}).input:
+        const target = command.split(" ")[1];
+        const found = projects.find(p => p.title.toLowerCase().includes(target));
+        if (found) {
+          window.open(found.githubUrl, "_blank");
+          response = `Opening ${found.title} in new tab...`;
+        } else {
+          response = `Directory '${target}' not found.`;
+        }
         break;
       default:
         response = `Command not found: ${command}`;

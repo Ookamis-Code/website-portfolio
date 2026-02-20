@@ -3,6 +3,12 @@ import { Code2, Github, ExternalLink } from 'lucide-react';
 
 export default function ProjectCard({ project }: { project: Project }) {
     return (
+        <a 
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block group"
+        >
         <div className="p-6 rounded-x1 border border-zinc-800 bg-zinc-900/50 hover:border-blue-500/50 transition-all group">
             <div className="flex justify-between items-start mb-4">
                 <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400">
@@ -37,6 +43,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                         {project.stars > 0 && <span>⭐ {project.stars}</span>}
                 </div>
         </div>
+        </a>
     );
 }
 
