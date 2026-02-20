@@ -21,7 +21,7 @@ jobs:
           context: .
           push: false 
           build-args: |
-            GITHUB_TOKEN=dummy_token
+            GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
           tags: portfolio:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max

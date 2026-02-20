@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Project } from '../types/project';
 
-export const useTerminal = (projects: any[]) => {
+export const useTerminal = (projects: Project[]) => {
   const [history, setHistory] = useState<string[]>(["Welcome to the System-Agnostic Portfolio. Type 'help' for commands."]);
 
   const execute = (cmd: string) => {

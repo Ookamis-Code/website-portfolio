@@ -1,9 +1,9 @@
 "use client";
 import { useState } from 'react';
 import { useTerminal } from '../hooks/useTerminal';
-import { projects } from '../lib/projects';
+import { Project } from '../types/project';
 
-export default function Terminal() {
+export default function Terminal({ projects }: {projects: Project[] }) {
   const [input, setInput] = useState('');
   const { history, execute } = useTerminal(projects);
 
