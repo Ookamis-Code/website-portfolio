@@ -1,5 +1,5 @@
 import { Project } from '../types/project';
-import { Code2, Github, ExternalLink } from 'lucide-react';
+import { Code2, ExternalLink } from 'lucide-react';
 
 export default function ProjectCard({ project }: { project: Project }) {
     return (
@@ -17,6 +17,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">
                     {project.language}
                 </span>
+                <ExternalLink size={14} />
             </div>
             <h3 className="text-x1 font-bold text-zinc-100 group-hover:text-blue-400 transition-colors">
                 {project.title}
@@ -24,16 +25,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <p className="text-zinc-400 mt-2 text-sm leading leading-relaxed">
                 {project.description}
             </p>
-            <div className="mt-6 flex gap-4">
-                <a href={project.githubUrl} className="text-zinc-500 hover:text-white transition-colors">
-                    <Github size={20} />
-                </a>
-                {project.liveUrl && (
-                    <a href={project.liveUrl} className="text-zinc-500 hover:text-white transition-colors">
-                        <ExternalLink size={20} />
-                    </a>
-                )}
-            </div>
+            
                 <div className="flex items-center gap-4 mt-4 text-xs text-zinc-500">
                     <span className="flex items-center gap-1">
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
