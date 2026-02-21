@@ -19,10 +19,10 @@ export const useTerminal = (projects: Project[]) => {
         setHistory([]);
         return;
       case 'about':
-        response = "Self-taught systems engineer focused on language-agnostic architecture.";
+        response = "I am a Self-taught systems engineer, of 15 years, focused on language-agnostic architecture. You give me a task and the language to use, and I will build it. I have experience across a wide variety of languages and industries, and I am always eager to learn new technologies and take on new challenges.";
         break;
       case 'contact':
-        response = "Email:ookamiscode@gmail.com";
+        response = "Email: ookamiscode@gmail.com";
         break;
       case 'github':
         response = "GitHub:https://github.com/Ookamis-Code";

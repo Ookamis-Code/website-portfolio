@@ -25,14 +25,27 @@ export default function Terminal({ projects }: {projects: Project[] }) {
         {history.map((line, i) => (
           <div key={i} className="mb-1 leading-relaxed whitespace-pre-wrap">{line}</div>
         ))}
-        <form onSubmit={handleSubmit} className="flex mt-2">
-          <span className="text-blue-500 mr-2">guest@portfolio:~$</span>
+        <form onSubmit={handleSubmit} className="flex mt-2 items-center flex-wrap">
+          <span className="text-blue-500 mr-2 shrink-0 text-xs md:text-sm">guest@portfolio:~$</span>
+          <div className="relative inline-flex items-center min-w-[10px]">
           <input 
             autoFocus
-            className="bg-transparent border-none outline-none flex-1 text-white"
+            className="bg-transparent border-none outline-none w-full text-white caret-transparent text-xs md:text-sm z-10 font-mono"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            spellCheck="false"
+            autoComplete='off'
+            style={{ width: `${Math.max(input.length, 1)}ch`}}
           />
+          { /* custom blinking curosr */}
+          <div 
+            className="absolute right-[-8px] w-2 h-4 md:h-5 bg-blue-500 animate-blink pointer-events-none z-0"
+            style={{
+              left: `${input.length}ch`,
+              marginLeft: '2px'
+            }}
+            />
+            </div>
         </form>
       </div>
     </div>

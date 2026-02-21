@@ -6,7 +6,7 @@ const octokit = new Octokit({
 });
 
 const REPO_CONFIG = [
-    {owner: "Ookamis-Code", repo: "TaskDispatcher", language: "C#" as const},
+    {owner: "Ookamis-Code", repo: "TaskDispatcherApi", language: "C#" as const},
     {owner: "Ookamis-Code", repo: "IntergrationEngine", language: "C#" as const},
     {owner: "Ookamis-Code", repo: "GoLedger", language: "Go" as const},
     {owner: "Ookamis-Code", repo: "website-portfolio", language: "TypeScript, Dockerfile, JavaScript, CSS" as const},
